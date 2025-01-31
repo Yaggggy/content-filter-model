@@ -25,15 +25,15 @@ class CranCorpusAnalyzer(CorpusAnalyzer):
         # current document that is being built
         current_id: int = None
         current_lines: List[str] = []
-        # marca cuando empieza el texto del documento actual
+       
         getting_words = False
         current_title: list = []
         getting_title = False
         for i, line in enumerate(corpus_fd.readlines()):
             m = self.id_re.match(line)
-            # se empieza un nuevo documento
+  
             if m is not None:
-                # había un documento actual que se guarda en la lista de documentos
+             
                 if len(current_lines) > 0:
                     tokens = self.preprocess_text(" ".join(current_lines))
                     title = self.title_preprocessing(current_title)
