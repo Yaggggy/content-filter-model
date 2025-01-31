@@ -11,11 +11,6 @@ class VectorMRI(MRI):
         self.a = 0.4  # 0.5
 
     def ranking_function(self, query: List[Tuple[int, int]]) -> List[Tuple[int, float]]:
-        """
-        Main function that returns a sorted ranking of the similarity
-        between the corpus and the query.
-        format: [doc_id, similarity]
-        """
         ranking = []
         query_vect = dict(query)
         for i, doc in enumerate(self.doc_analyzer.documents):
