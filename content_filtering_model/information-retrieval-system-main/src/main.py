@@ -65,5 +65,3 @@ if __name__ == '__main__':
     while True:
         query = input('Make a query:\n')
         all_steps(query, system)
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
