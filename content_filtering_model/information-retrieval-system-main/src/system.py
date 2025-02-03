@@ -18,7 +18,6 @@ class IRSystem:
         self.corpus = model.doc_analyzer
         stemming = self.corpus.stemmer is not None
         if self.corpus.name != 'union':
-            # with the union of the datasets, the cluster algorithm cannot run
             self.clusterer = ClusterManager(self.corpus)
             self.clusterer.fit_cluster(4)
         else:
