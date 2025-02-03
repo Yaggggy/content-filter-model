@@ -8,12 +8,6 @@ import math
 
 
 def query_expansion(query: List[str], doc_analyzer, mode='hypernym') -> List[str]:
-    """
-    Does query expansion using WordNet hypernyms and synonyms.
-    :param query: list of tokenized query terms
-    :param mode: choose mode: hypernym for hypernym based relaxation, 'synonym' for synonym based relaxation
-    :return: list containing a list of alternate tokenized queries
-    """
     tokens, change = spell_checking(query)
     new_tokens = get_relaxed_query(query, doc_analyzer)
     if change:
