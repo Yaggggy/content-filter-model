@@ -13,8 +13,7 @@ from utils import remove_punctuation, convert_to_lower, tokenize
 
 class CorpusAnalyzer:
     def __init__(self, corpus_path: Path, *, name='corpus', stemming=False):
-        # A dictionary of documents where the keys are their identifier
-        # and the value its a Document instance
+        
         self.documents: List[Document] = []
         if stemming:
             self.stemmer = nltk.PorterStemmer()
