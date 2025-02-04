@@ -85,10 +85,7 @@ class CorpusAnalyzer:
         return [dict(self.index.doc2bow(doc.tokens)) for doc in self.documents]
 
     def doc2bow(self, id: int) -> Dict[int, int]:
-        """
-        Converts the document matching the id into the bag-of-words representation
-        format = list of (token_id, token_count) 2-tuples.
-        """
+        
         return self.vectors[id]
 
     def token2id(self, token: str):
